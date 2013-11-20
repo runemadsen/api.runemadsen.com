@@ -37,3 +37,9 @@ GET /teachings
 ```bash
 GET /info
 ```
+
+### Photos
+
+```bash
+GET /photos
+```
