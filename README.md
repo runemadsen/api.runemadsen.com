@@ -7,3 +7,9 @@ In a hypermedia'ish way, the API is explanatory. Do a `GET` on `api.runemadsen.c
 
 Resources
 ---------
+
+### Portfolio
+
+```bash
+GET /portfolio
+```
