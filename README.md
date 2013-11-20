@@ -43,3 +43,12 @@ GET /info
 ```bash
 GET /photos
 ```
+
+
+
+Random Ideas
+------------
+
+Foursquare data?
+
+GitHub data?
