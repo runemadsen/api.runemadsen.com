@@ -25,3 +25,15 @@ GET /experiences
 ```bash
 GET /writings
 ```
+
+### Teachings
+
+```bash
+GET /teachings
+```
+
+### Info
+
+```bash
+GET /info
+```
