@@ -67,25 +67,21 @@ You can paginate, yeah!
 Resources
 ---------
 
-### Works
+### Portfolio
 
 Status: **Not Implemented**
 
-```bash
-GET /works
-```
-
-### Experiences
-
-Status: **Not Implemented**
+The portfolio endpoint returns work done by me.
 
 ```bash
-GET /experiences
+GET /portfolio
 ```
 
 ### Writings
 
 Status: **Not Implemented**
+
+The writings endpoint returns shorter and longer essays written by me.
 
 ```bash
 GET /writings
@@ -95,8 +91,20 @@ GET /writings
 
 Status: **Not Implemented**
 
+The courses endpoint returns syllabi and lectures from classes taught by me.
+
 ```bash
 GET /courses
+```
+
+### Presentations
+
+Status: **Not Implemented**
+
+The presentations endpoint returns slides from presentations given by me.
+
+```bash
+GET /presentations
 ```
 
 ### Bio
@@ -104,6 +112,16 @@ GET /courses
 Status: **Not Implemented**
 
 The bio endpoint returns biographical info, like recent professional experience and education.
+
+```bash
+GET /bio
+```
+
+### Info
+
+Status: **Not Implemented**
+
+The info endpoint returns contact info.
 
 ```bash
 GET /bio
