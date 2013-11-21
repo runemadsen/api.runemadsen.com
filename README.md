@@ -59,11 +59,17 @@ If the resource comes preloaded with any of the above `_links`, those resources 
 }
 ```
 
+### Pagination
+
+You can paginate, yeah!
+
 
 Resources
 ---------
 
 ### Works
+
+Status: **Not Implemented**
 
 ```bash
 GET /works
@@ -71,39 +77,62 @@ GET /works
 
 ### Experiences
 
+Status: **Not Implemented**
+
 ```bash
 GET /experiences
 ```
 
 ### Writings
 
+Status: **Not Implemented**
+
 ```bash
 GET /writings
 ```
 
-### Teachings
+### Courses
+
+Status: **Not Implemented**
 
 ```bash
-GET /teachings
+GET /courses
 ```
 
-### Info
+### Bio
+
+Status: **Not Implemented**
+
+The bio endpoint returns biographical info, like recent professional experience and education.
 
 ```bash
-GET /info
+GET /bio
 ```
 
 ### Photos
+
+Status: **Not Implemented**
 
 ```bash
 GET /photos
 ```
 
+### Activities
 
+Status: **Not Implemented**
 
-Random Ideas
-------------
+The activities endpoint returns recent real world activities, like Foursquare check-ins.
 
-Foursquare data?
+```bash
+GET /activities
+```
 
-GitHub data?
+### Code
+
+Status: **Not Implemented**
+
+The code endpoint returns programming activities, like statistics around programming languages and Git commits.
+
+```bash
+GET /code
+```
