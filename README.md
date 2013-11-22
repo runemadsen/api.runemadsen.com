@@ -17,7 +17,7 @@ The API tries to conform to the [HAL specification](http://stateless.co/hal_spec
 
 ### _links
 
-Every resource has a `_links` object that holds URI's that holds resource links. This is a very simple (and fake) example of what that might look like.
+Every resource has a `_links` object that holds URI's for resource links. Here's a very simple (and fake) example of what that might look like.
 
 ```json
 {
@@ -64,7 +64,7 @@ If the resource comes preloaded with any of the above `_links`, those resources 
 You can paginate, yeah!
 
 
-Resources
+Endpoints
 ---------
 
 ### Portfolio
