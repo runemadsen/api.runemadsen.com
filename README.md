@@ -166,3 +166,11 @@ $ vagrant plugin install vagrant-berkshelf
 $ vagrant plugin install vagrant-omnibus
 $ vagrant up
 ```
+
+After chef has installed all the goodies, you can SSH into the dev box and run the api:
+
+```bash
+$ vagrant ssh
+$ cd /vagrant
+$ DO SOMETHING HERE????
+```
