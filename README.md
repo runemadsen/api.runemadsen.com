@@ -154,3 +154,15 @@ The code endpoint returns programming activities, like statistics around program
 ```bash
 GET /code
 ```
+
+Local Development
+-----------------
+
+If you want to try run this api on a local machine, you can use vagrant do spin up a development box:
+
+```bash
+$ gem install berkshelf
+$ vagrant plugin install vagrant-berkshelf
+$ vagrant plugin install vagrant-omnibus
+$ vagrant up
+```
