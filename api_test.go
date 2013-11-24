@@ -1,10 +1,12 @@
 package main
 
 import (
+  "github.com/codegangsta/martini"
   "net/http"
   "net/http/httptest"
   "reflect"
   "testing"
+  "./controllers"
 )
 
 // use this for initing stuff in the test
@@ -27,11 +29,12 @@ func refute(t *testing.T, a interface{}, b interface{}) {
   }
 }
 
-func TestHelloWorld(t *testing.T) {
+func TestHomeIndex(t *testing.T) {
+  m := martini.Classic()
+  m.Get("/", controllers.HomeIndex)
   request, _ := http.NewRequest("GET", "/", nil)
   response := httptest.NewRecorder()
-  HelloWorld(response, request)
+  m.ServeHTTP(response, request)
   expect(t, response.Code, http.StatusOK)
   expect(t, response.Body.String(), "Hello world!")
-
 }

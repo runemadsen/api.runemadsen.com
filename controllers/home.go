@@ -4,6 +4,6 @@ import (
   "net/http"
 )
 
-func HelloWorld(res http.ResponseWriter, req *http.Request) string {
+func HomeIndex(res http.ResponseWriter, req *http.Request) string {
   return "Hello world!"
 }
