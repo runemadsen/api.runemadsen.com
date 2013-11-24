@@ -1,13 +1,21 @@
 package main
 
 import (
-  "net/http"
   "testing"
+  "net/http"
+  . "launchpad.net/gocheck"
   "../controllers"
 )
 
-func TestHomeIndex(t *testing.T) {
+func Test(t *testing.T) { TestingT(t) }
+type MySuite struct{}
+var _ = Suite(&MySuite{})
+
+// GET /
+// -----------------------------------------------------------
+
+func (s *MySuite) TestHomeIndex(c *C) {
   response := testRequest("GET", "/", controllers.HomeIndex)
-  expect(t, response.Code, http.StatusOK)
-  expect(t, response.Body.String(), "Hello world!")
+  c.Check(response.Code, Equals, http.StatusOK)
+  c.Check(response.Body.String(), Equals, "Hello world!")
 }
