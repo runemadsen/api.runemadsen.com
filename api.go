@@ -2,8 +2,8 @@ package main
 
 import (
   "github.com/codegangsta/martini"
-  "net/http"
   "./lib"
+  "./controllers"
 )
 
 func main() {
@@ -15,12 +15,8 @@ func main() {
   m := martini.Classic()
 
   // routes
-  m.Get("/", HelloWorld)
+  m.Get("/", controllers.HelloWorld)
 
   // launch
   m.Run()
-}
-
-func HelloWorld(res http.ResponseWriter, req *http.Request) string {
-  return "Hello world!"
 }
