@@ -7,6 +7,11 @@ import (
   "testing"
 )
 
+// use this for initing stuff in the test
+//func init() {
+//   initDb()
+//}
+
 // Test Helpers
 // -----------------------------------------------------------------------
 
@@ -22,30 +27,11 @@ func refute(t *testing.T, a interface{}, b interface{}) {
   }
 }
 
-func TestSomething(t *testing.T) {
-  //expect(t, "Rune", "Rune")
-
-  //recorder := httptest.NewRecorder()
-  //req, err := http.NewRequest("GET", "http://localhost:3000/", nil)
-  //if err != nil {
-  //  t.Error(err)
-  //}
-  //context := New().createContext(recorder, req)
-  //router.Handle(recorder, req, context)
-  
-  handler := func(w http.ResponseWriter, r *http.Request) {
-    http.Error(w, "something failed", http.StatusInternalServerError)
-  }
-  
-  req, err := http.NewRequest("GET", "http://localhost:3000", nil)
-  if err != nil {
-    t.Error(err)
-  }
-  
-  recorder := httptest.NewRecorder()
-  handler(recorder, req)
-  
-  expect(t, recorder.Code, http.StatusOK)
-  expect(t, recorder.Body.String(), "Hello world!")
+func TestHelloWorld(t *testing.T) {
+  request, _ := http.NewRequest("GET", "/", nil)
+  response := httptest.NewRecorder()
+  HelloWorld(response, request)
+  expect(t, response.Code, http.StatusOK)
+  expect(t, response.Body.String(), "Hello world!")
 
 }

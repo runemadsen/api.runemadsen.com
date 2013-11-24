@@ -1,14 +1,26 @@
 package main
 
-import "github.com/codegangsta/martini"
+import (
+  "github.com/codegangsta/martini"
+  "net/http"
+  "./lib"
+)
 
 func main() {
-  
-  m := martini.Classic()
-  
-  m.Get("/", func() string {
-    return "Hello world!"
-  })
 
+  // database
+  lib.InitDB()
+
+  // martini
+  m := martini.Classic()
+
+  // routes
+  m.Get("/", HelloWorld)
+
+  // launch
   m.Run()
+}
+
+func HelloWorld(res http.ResponseWriter, req *http.Request) string {
+  return "Hello world!"
 }

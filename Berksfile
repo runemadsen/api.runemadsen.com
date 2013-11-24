@@ -1,7 +1,5 @@
 site :opscode
 
-metadata
-
 cookbook 'apt'
 cookbook 'golang'
-cookbook "rethinkdb", :git => "https://github.com/AVVSDevelopment/chef-rethinkdb"
+cookbook "rethinkdb", :git => "https://github.com/esycat/chef-rethinkdb-cookbook"

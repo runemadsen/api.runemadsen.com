@@ -16,12 +16,17 @@ Vagrant.configure("2") do |config|
   config.berkshelf.enabled = true
 
   config.vm.provision :chef_solo do |chef|
-    chef.json = {}
+    chef.json = {
+      "go" => {
+        "version" => "1.1.2"
+      }
+    }
     chef.run_list = [
       "apt",
       "golang",
-      "rethinkdb",
-      "rethinkdb::start"
+      "rethinkdb"
+      # set the gopath?
+      # install the goland packages???
     ]
   end
 end
