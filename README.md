@@ -5,10 +5,6 @@ This is the codebase for `api.runemadsen.com`, a hypermedia API that returns dat
 
 In a hypermedia'ish way, the API is explanatory. Do a `GET` on `api.runemadsen.com`, and it will list all resources available for unauthenticated users. If you have an authentication token (which you don't, because there's only one and that's for me), it will also list requests you can make while authenticated.
 
-TODO
-----
-
-application/hal+json
 
 Schema
 ------
@@ -172,5 +168,12 @@ After chef has installed all the goodies, you can SSH into the dev box and run t
 ```bash
 $ vagrant ssh
 $ cd /vagrant
-$ DO SOMETHING HERE????
+$ goreman start
 ```
+
+You now have the api running on `localhost:3001` and rethinkdb running on `localhost:8081` on your host machine.
+
+TODO
+----
+
+application/hal+json

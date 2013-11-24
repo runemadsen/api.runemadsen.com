@@ -1,0 +1,81 @@
+2013-11-24T17:11:19.668243521 0.019545s info: Creating directory /vagrant/rethinkdb_data
+2013-11-24T17:11:19.675163693 0.026466s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/vagrant/rethinkdb_data' did not already exist.)
+2013-11-24T17:11:19.676632271 0.027934s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-24T17:11:19.693708468 0.045013s info: Running on Linux 3.5.0-23-generic x86_64
+2013-11-24T17:11:19.695115744 0.046417s info: Loading data from directory /vagrant/rethinkdb_data
+2013-11-24T17:11:19.701040964 0.052342s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/tmp/metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:11:19.705941052 0.057242s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/tmp/metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:11:19.736542453 0.087844s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/tmp/auth_metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:11:19.740212949 0.091514s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/tmp/auth_metadata.create" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:11:19.764463081 0.115764s info: Listening for intracluster connections on port 29015
+2013-11-24T17:11:19.770848051 0.122150s info: Listening for client driver connections on port 28015
+2013-11-24T17:11:19.770888943 0.122190s info: Listening for administrative HTTP connections on port 8080
+2013-11-24T17:11:19.770889610 0.122191s info: Listening on addresses: 127.0.0.1, 127.0.1.1
+2013-11-24T17:11:19.770889977 0.122191s info: To fully expose RethinkDB on the network, bind to all addresses
+2013-11-24T17:11:19.770890313 0.122191s info: by running rethinkdb with the `--bind all` command line option.
+2013-11-24T17:11:19.770890622 0.122192s info: Server ready
+2013-11-24T17:12:21.958569969 62.309872s info: Server got SIGINT; shutting down...
+2013-11-24T17:12:21.958733908 62.310035s info: Shutting down client connections...
+2013-11-24T17:12:21.959231053 62.310532s info: All client connections closed.
+2013-11-24T17:12:21.959231922 62.310533s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-11-24T17:12:21.959232272 62.310533s info: Storage engine shut down.
+2013-11-24T17:12:41.405775596 0.005865s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-24T17:12:41.408497620 0.008588s info: Running on Linux 3.5.0-23-generic x86_64
+2013-11-24T17:12:41.409107429 0.009197s info: Loading data from directory /vagrant/rethinkdb_data
+2013-11-24T17:12:41.411720262 0.011810s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:12:41.414784060 0.014874s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:12:41.418207605 0.018297s info: Listening for intracluster connections on port 29015
+2013-11-24T17:12:41.419661138 0.019751s info: Listening for client driver connections on port 28015
+2013-11-24T17:12:41.420231914 0.020322s info: Listening for administrative HTTP connections on port 8080
+2013-11-24T17:12:41.420412101 0.020502s info: Listening on addresses: 127.0.0.1, 127.0.1.1, 10.0.2.15
+2013-11-24T17:12:41.420412721 0.020502s info: Server ready
+2013-11-24T17:12:44.481820682 3.081911s info: Server got SIGINT; shutting down...
+2013-11-24T17:12:44.482101405 3.082191s info: Shutting down client connections...
+2013-11-24T17:12:44.482188593 3.082278s info: All client connections closed.
+2013-11-24T17:12:44.482189135 3.082279s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-11-24T17:12:44.482189411 3.082279s info: Storage engine shut down.
+2013-11-24T17:12:52.400143591 0.005973s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-24T17:12:52.403308356 0.009138s info: Running on Linux 3.5.0-23-generic x86_64
+2013-11-24T17:12:52.404030157 0.009859s info: Loading data from directory /vagrant/rethinkdb_data
+2013-11-24T17:12:52.406794916 0.012624s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:12:52.412433212 0.018262s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:12:52.415627368 0.021456s info: Listening for intracluster connections on port 29015
+2013-11-24T17:12:52.417025259 0.022854s info: Listening for client driver connections on port 28015
+2013-11-24T17:12:52.417042688 0.022872s info: Listening for administrative HTTP connections on port 8080
+2013-11-24T17:12:52.417750338 0.023580s info: Listening on addresses: 127.0.0.1, 127.0.1.1, 10.0.2.15
+2013-11-24T17:12:52.417751332 0.023580s info: Server ready
+2013-11-24T17:12:58.551586080 6.157416s info: Server got SIGINT; shutting down...
+2013-11-24T17:12:58.551822718 6.157652s info: Shutting down client connections...
+2013-11-24T17:12:58.551885685 6.157715s info: All client connections closed.
+2013-11-24T17:12:58.551886126 6.157715s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-11-24T17:12:58.551886354 6.157715s info: Storage engine shut down.
+2013-11-24T17:13:34.469179895 0.005432s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-24T17:13:34.471931469 0.008183s info: Running on Linux 3.5.0-23-generic x86_64
+2013-11-24T17:13:34.472420671 0.008672s info: Loading data from directory /vagrant/rethinkdb_data
+2013-11-24T17:13:34.475137597 0.011389s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:13:34.478327257 0.014579s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:13:34.482283688 0.018535s info: Listening for intracluster connections on port 29015
+2013-11-24T17:13:34.483581796 0.019833s info: Listening for client driver connections on port 28015
+2013-11-24T17:13:34.484260511 0.020512s info: Listening for administrative HTTP connections on port 8080
+2013-11-24T17:13:34.484389186 0.020641s info: Listening on addresses: 127.0.0.1, 127.0.1.1, 10.0.2.15
+2013-11-24T17:13:34.484389666 0.020641s info: Server ready
+2013-11-24T17:13:48.482782740 14.019035s info: Server got SIGINT; shutting down...
+2013-11-24T17:13:48.483778775 14.020031s info: Shutting down client connections...
+2013-11-24T17:13:48.484594457 14.020846s info: All client connections closed.
+2013-11-24T17:13:48.485325286 14.021577s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-11-24T17:13:48.485326875 14.021578s info: Storage engine shut down.
+2013-11-24T17:15:15.840297088 0.014779s info: Running rethinkdb 1.10.1-0ubuntu1~precise (GCC 4.6.3)...
+2013-11-24T17:15:15.853486929 0.027966s info: Running on Linux 3.5.0-23-generic x86_64
+2013-11-24T17:15:15.854915602 0.029395s info: Loading data from directory /vagrant/rethinkdb_data
+2013-11-24T17:15:15.860664317 0.035143s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:15:15.868585059 0.043064s warn: Could not turn off filesystem caching for database file: "/vagrant/rethinkdb_data/auth_metadata" (Is the file located on a filesystem that doesn't support direct I/O (e.g. some encrypted or journaled file systems)?) This can cause performance problems.
+2013-11-24T17:15:15.880036544 0.054515s info: Listening for intracluster connections on port 29015
+2013-11-24T17:15:15.883931506 0.058411s info: Listening for client driver connections on port 28015
+2013-11-24T17:15:15.885435234 0.059914s info: Listening for administrative HTTP connections on port 8080
+2013-11-24T17:15:15.885576940 0.060056s info: Listening on addresses: 127.0.0.1, 127.0.1.1, 10.0.2.15
+2013-11-24T17:15:15.885577379 0.060056s info: Server ready
+2013-11-24T17:16:16.768544365 60.943024s info: Server got SIGINT; shutting down...
+2013-11-24T17:16:16.768887295 60.943369s info: Shutting down client connections...
+2013-11-24T17:16:16.769200262 60.943679s info: All client connections closed.
+2013-11-24T17:16:16.769201005 60.943680s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2013-11-24T17:16:16.769201283 60.943680s info: Storage engine shut down.

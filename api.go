@@ -1,6 +1,7 @@
 package main
 
 import (
+  "net/http"
   "github.com/codegangsta/martini"
   "./lib"
   "./controllers"
@@ -18,5 +19,5 @@ func main() {
   m.Get("/", controllers.HomeIndex)
 
   // launch
-  m.Run()
+  http.ListenAndServe("0.0.0.0:3000", m)
 }
