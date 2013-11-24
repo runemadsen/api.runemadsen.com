@@ -6,13 +6,17 @@ import (
   "./controllers"
 )
 
+var(
+  m *martini.ClassicMartini
+)
+
 func main() {
 
   // database
   lib.InitDB()
 
   // martini
-  m := martini.Classic()
+  m = martini.Classic()
 
   // routes
   m.Get("/", controllers.HelloWorld)
