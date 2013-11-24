@@ -173,6 +173,16 @@ $ goreman start
 
 You now have the api running on `localhost:3001` and rethinkdb running on `localhost:8081` on your host machine.
 
+Tests
+-----
+
+Run the test by doing this:
+
+```bash
+$ cd test
+$ go test
+```
+
 TODO
 ----
 
