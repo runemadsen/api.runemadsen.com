@@ -186,4 +186,7 @@ $ go test
 TODO
 ----
 
-application/hal+json
+- Actually write the API (he)
+- Run tests on test DB
+- Setup before and after calls in tests to seed test DB
+- Turn host, port, db into ENV vars
