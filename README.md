@@ -186,7 +186,4 @@ $ go test
 TODO
 ----
 
-- Actually write the API (he)
-- Run tests on test DB
-- Setup before and after calls in tests to seed test DB
-- Turn host, port, db into ENV vars
+- application+json/hal as middleware https://github.com/codegangsta/martini#middleware-handlers

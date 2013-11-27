@@ -20,7 +20,7 @@
     "runemadsen": {
       "locked_version": "0.0.1",
       "git": "https://github.com/runemadsen/api.runemadsen.com-cookbook",
-      "ref": "73f9864eec53f787908c69e8a9aa2f0ddfccd0ad"
+      "ref": "05d645d9f574f67400da43291fd78083d5eee5a9"
     },
     "git": {
       "locked_version": "2.7.0"

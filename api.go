@@ -9,7 +9,7 @@ import (
 func main() {
 
   // database
-  lib.InitDB()
+  app.InitDB()
 
   // martini
   m := martini.Classic()

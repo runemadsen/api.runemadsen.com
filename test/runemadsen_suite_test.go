@@ -1,12 +1,21 @@
-package main
+package test_test
 
+// http://onsi.github.io/ginkgo/#getting_ginkgo
 import (
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
+	"testing"
   "fmt"
-  "encoding/json"
   "github.com/codegangsta/martini"
   "net/http"
   "net/http/httptest"
+  "github.com/bitly/go-simplejson"
 )
+
+func TestTest(t *testing.T) {
+	RegisterFailHandler(Fail)
+	RunSpecs(t, "Test Suite")
+}
 
 // Test Helpers
 // -----------------------------------------------------------------------
@@ -20,15 +29,13 @@ func testRequest(method string, route string, handler martini.Handler) *httptest
   return response
 }
 
-func getJSON(response *httptest.ResponseRecorder) map[string]interface{} {
-  var obj interface{}
-  dec := json.NewDecoder(response.Body)
-  err := dec.Decode(&obj)
+func fromJSON(response *httptest.ResponseRecorder) *simplejson.Json {
+  js, err := simplejson.NewJson([]byte(response.Body.String()))
   if err != nil {
     fmt.Println("JSON Encoding error:")
     fmt.Println("---------------------------------------------")
     fmt.Println(err)
     fmt.Println("---------------------------------------------")
   }
-  return obj.(map[string]interface{})
+  return js
 }

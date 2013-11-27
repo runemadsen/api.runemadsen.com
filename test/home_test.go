@@ -1,33 +1,22 @@
-package main
+package test_test
 
 import (
-  "fmt"
-  "testing"
-  "net/http"
-  . "launchpad.net/gocheck"
-  "../app"
+	"../app"
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
+  //"fmt"
 )
 
-func Test(t *testing.T) { TestingT(t) }
-type MySuite struct{}
-var _ = Suite(&MySuite{})
+var _ = Describe("Home", func() {
 
-// GET /
-// -----------------------------------------------------------
+  It("returns a valid _links object", func() {
+    
+    response := testRequest("GET", "/", app.HomeIndex)
+    js := fromJSON(response)
 
-func (s *MySuite) TestHomeIndex(c *C) {
-  
-  response := testRequest("GET", "/", app.HomeIndex)
-  parsed := getJSON(response)
+    Expect(response.Code).To(Equal(200))
+    Expect(js.Get("_links").Get("self").Get("href").MustString()).To(Equal("/"))
+    Expect(js.Get("_links").Get("portfolio").Get("href").MustString()).To(Equal("/portfolio"))
+  })
 
-  c.Check(response.Code, Equals, http.StatusOK)
-
-  fmt.Println("JSON")
-  fmt.Println(parsed["_links"])
-
-  // getJSON should return a map[string]interface object
-
-  // convert the _links to a map[string]Link hash
-
-  // check that we have the correct links
-}
+})
