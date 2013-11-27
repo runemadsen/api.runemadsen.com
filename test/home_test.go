@@ -11,7 +11,7 @@ var _ = Describe("Home", func() {
 
   It("returns a valid _links object", func() {
     
-    response := testRequest("GET", "/", app.HomeIndex)
+    response := Request("GET", "/", app.HomeIndex)
     js := fromJSON(response)
 
     Expect(response.Code).To(Equal(200))

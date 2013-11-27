@@ -20,7 +20,7 @@ func TestTest(t *testing.T) {
 // Test Helpers
 // -----------------------------------------------------------------------
 
-func testRequest(method string, route string, handler martini.Handler) *httptest.ResponseRecorder {
+func Request(method string, route string, handler martini.Handler) *httptest.ResponseRecorder {
   m := martini.Classic()
   m.Get("/", handler)
   request, _ := http.NewRequest(method, route, nil)
