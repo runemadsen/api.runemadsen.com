@@ -12,21 +12,23 @@ import (
   "github.com/bitly/go-simplejson"
 )
 
+var (
+  js *simplejson.Json
+  response *httptest.ResponseRecorder
+)
+
 func TestTest(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Test Suite")
 }
 
-// Test Helpers
-// -----------------------------------------------------------------------
-
-func Request(method string, route string, handler martini.Handler) *httptest.ResponseRecorder {
+func Request(method string, route string, handler martini.Handler) {
   m := martini.Classic()
   m.Get("/", handler)
   request, _ := http.NewRequest(method, route, nil)
-  response := httptest.NewRecorder()
+  response = httptest.NewRecorder()
   m.ServeHTTP(response, request)
-  return response
+  js = fromJSON(response)
 }
 
 func fromJSON(response *httptest.ResponseRecorder) *simplejson.Json {
