@@ -1,7 +1,6 @@
 package app
 
 import (
-  //"fmt"
   "net/http"
   "encoding/json"
 )
@@ -15,14 +14,8 @@ func HomeIndex(res http.ResponseWriter, req *http.Request) string {
   }
 
   parsed, err := json.Marshal(hal)
-
-  //fmt.Println("JSON:")
-  //fmt.Println(string(parsed))
-
-  if err != nil {
-    //fmt.Println("JSON ERROR:")
-    //fmt.Println(err)
-  }
+  // this err parsing should be in a toJSON function, so I can do this:
+  // return toJSON(hal)
   
   return string(parsed)
 }
