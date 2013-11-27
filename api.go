@@ -3,8 +3,7 @@ package main
 import (
   "net/http"
   "github.com/codegangsta/martini"
-  "./lib"
-  "./controllers"
+  "./app"
 )
 
 func main() {
@@ -16,7 +15,7 @@ func main() {
   m := martini.Classic()
 
   // routes
-  m.Get("/", controllers.HomeIndex)
+  m.Get("/", app.HomeIndex)
 
   // launch
   http.ListenAndServe("0.0.0.0:3000", m)

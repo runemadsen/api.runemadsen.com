@@ -1,10 +1,11 @@
 package main
 
 import (
+  "fmt"
   "testing"
   "net/http"
   . "launchpad.net/gocheck"
-  "../controllers"
+  "../app"
 )
 
 func Test(t *testing.T) { TestingT(t) }
@@ -15,7 +16,18 @@ var _ = Suite(&MySuite{})
 // -----------------------------------------------------------
 
 func (s *MySuite) TestHomeIndex(c *C) {
-  response := testRequest("GET", "/", controllers.HomeIndex)
+  
+  response := testRequest("GET", "/", app.HomeIndex)
+  parsed := getJSON(response)
+
   c.Check(response.Code, Equals, http.StatusOK)
-  c.Check(response.Body.String(), Equals, "Hello world!")
+
+  fmt.Println("JSON")
+  fmt.Println(parsed["_links"])
+
+  // getJSON should return a map[string]interface object
+
+  // convert the _links to a map[string]Link hash
+
+  // check that we have the correct links
 }

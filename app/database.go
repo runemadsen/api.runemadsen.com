@@ -1,4 +1,4 @@
-package lib
+package app
 
 import (
   r "github.com/dancannon/gorethink"
