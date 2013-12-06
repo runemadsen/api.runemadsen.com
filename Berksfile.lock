@@ -32,7 +32,7 @@
       "locked_version": "1.4.2"
     },
     "yum": {
-      "locked_version": "2.4.2"
+      "locked_version": "2.4.4"
     },
     "windows": {
       "locked_version": "1.11.0"

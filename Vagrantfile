@@ -18,13 +18,20 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       "go" => {
-        "version" => "1.1.2"
+        "version" => "1.1.2",
+        "packages" => [
+          # install test packages that don't get installed with go get
+          "github.com/bitly/go-simplejson",
+          "github.com/mattn/goreman",
+          "github.com/onsi/ginkgo",
+          "github.com/onsi/gomega"
+        ]
       }
     }
     chef.run_list = [
       "apt",
       "curl",
-      "golang",
+      "golang::packages",
       "rethinkdb",
       "mercurial",
       "runemadsen"
