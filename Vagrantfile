@@ -20,11 +20,12 @@ Vagrant.configure("2") do |config|
       "go" => {
         "version" => "1.1.2",
         "packages" => [
-          # install test packages that don't get installed with go get
+          "github.com/codegangsta/martini",
           "github.com/bitly/go-simplejson",
           "github.com/mattn/goreman",
           "github.com/onsi/ginkgo",
-          "github.com/onsi/gomega"
+          "github.com/onsi/gomega",
+          "github.com/dancannon/gorethink"
         ]
       }
     }
@@ -32,9 +33,7 @@ Vagrant.configure("2") do |config|
       "apt",
       "curl",
       "golang::packages",
-      "rethinkdb",
-      "mercurial",
-      "runemadsen"
+      "rethinkdb"
     ]
   end
 end
