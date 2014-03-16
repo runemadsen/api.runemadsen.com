@@ -23,6 +23,7 @@ var _ = Describe("Articles", func() {
     
     It("lets test", func() {
       rows, err := rethink.Table("articles").Run(session)
+      
       if err != nil {
         log.Println(err)
       }
@@ -32,9 +33,6 @@ var _ = Describe("Articles", func() {
         err := rows.Scan(&a)
         if err != nil {
           log.Println(err)
-        }
-        else {
-          log.Println(a)
         }
       }
     })
