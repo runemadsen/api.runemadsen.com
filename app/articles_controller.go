@@ -9,7 +9,7 @@ func ArticlesIndex(r render.Render) {
   hal := HAL{}
   
   hal.Links = map[string]Link{
-    "self"      : Link{"/articles", false},
+    "self" : Link{"/articles", false},
     "show" : Link{"/articles/{id}", true},
   }
 

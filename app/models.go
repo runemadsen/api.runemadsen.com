@@ -8,3 +8,8 @@ type Link struct {
 type HAL struct {
   Links map[string]Link `json:"_links"`
 }
+
+type Article struct {
+  Title string `json:"title"`
+  Body string `json:"body"`
+}
