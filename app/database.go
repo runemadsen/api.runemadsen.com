@@ -9,10 +9,10 @@ import(
 func InitDB() *rethink.Session {
 
   session, err := rethink.Connect(map[string]interface{} {
-      "address" : "localhost:8080",//os.Getenv("RETHINKDB_URL"),
-      "database": "test",
-      "maxIdle" : 10,
-      "idleTimeout": time.Second  * 10,
+    "address" : "localhost:8080",//os.Getenv("RETHINKDB_URL"),
+    "database": "test",
+    "maxIdle" : 10,
+    "idleTimeout": time.Second  * 10,
   })
 
   if err != nil {

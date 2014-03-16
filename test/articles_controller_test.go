@@ -22,7 +22,21 @@ var _ = Describe("Articles", func() {
     })
     
     It("lets test", func() {
-
+      rows, err := rethink.Table("articles").Run(session)
+      if err != nil {
+        log.Println(err)
+      }
+  
+      for rows.Next() {
+        var a app.Article
+        err := rows.Scan(&a)
+        if err != nil {
+          log.Println(err)
+        }
+        else {
+          log.Println(a)
+        }
+      }
     })
 
     It("returns 200 ok", func() {
