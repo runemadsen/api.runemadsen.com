@@ -3,14 +3,14 @@ package app
 import (
   "log"
   "time"
-  "os"
+  //"os"
   r "github.com/dancannon/gorethink"
 )
 
 func InitDB() *r.Session {
 
   session, err := r.Connect(map[string]interface{} {
-      "address" : os.Getenv("RETHINKDB_URL"),
+      "address" : "localhost:8080",//os.Getenv("RETHINKDB_URL"),
       "database": "test",
       "maxIdle" : 10,
       "idleTimeout": time.Second  * 10,
