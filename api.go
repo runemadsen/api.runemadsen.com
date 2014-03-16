@@ -14,6 +14,9 @@ func main() {
   // martini
   m := martini.Classic()
 
+  // set up to use contrib renderer
+  m.Use(render.Renderer())
+
   // routes
   m.Get("/", app.HomeIndex)
 

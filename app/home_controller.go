@@ -1,10 +1,10 @@
 package app
 
 import (
-  "net/http"
+  "github.com/codegangsta/martini-contrib/render"
 )
 
-func HomeIndex(res http.ResponseWriter, req *http.Request) string {
+func HomeIndex(r render.Render) {
   
   hal := HAL{}
   
@@ -13,5 +13,5 @@ func HomeIndex(res http.ResponseWriter, req *http.Request) string {
     "portfolio" : Link{"/portfolio", false},
   }
 
-  return toJSON(hal)
+  r.JSON(200, hal)
 }

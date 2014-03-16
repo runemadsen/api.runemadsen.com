@@ -63,6 +63,16 @@ You can paginate, yeah!
 Endpoints
 ---------
 
+### Articles
+
+Status: **Not Implemented**
+
+The writings endpoint returns shorter and longer essays written by me.
+
+```bash
+GET /articles
+```
+
 ### Portfolio
 
 Status: **Not Implemented**
@@ -71,16 +81,6 @@ The portfolio endpoint returns work done by me.
 
 ```bash
 GET /portfolio
-```
-
-### Writings
-
-Status: **Not Implemented**
-
-The writings endpoint returns shorter and longer essays written by me.
-
-```bash
-GET /writings
 ```
 
 ### Courses
@@ -149,6 +149,16 @@ The code endpoint returns programming activities, like statistics around program
 
 ```bash
 GET /code
+```
+
+### Geo
+
+Status: **Not Implemented**
+
+The geo endpoint returns openpaths data
+
+```bash
+GET /geo
 ```
 
 Local Development

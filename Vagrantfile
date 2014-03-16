@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
         "version" => "1.1.2",
         "packages" => [
           "github.com/codegangsta/martini",
+          "github.com/codegangsta/martini-contrib/...",
           "github.com/bitly/go-simplejson",
           "github.com/mattn/goreman",
           "github.com/onsi/ginkgo",
