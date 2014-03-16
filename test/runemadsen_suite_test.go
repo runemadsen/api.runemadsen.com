@@ -1,6 +1,8 @@
 package test_test
 
 import (
+  r "github.com/dancannon/gorethink"
+  "../app"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"testing"
@@ -16,9 +18,11 @@ import (
 var (
   response *httptest.ResponseRecorder
   responseJSON *simplejson.Json
+  session *r.Session
 )
 
 func TestTest(t *testing.T) {
+  session = app.InitDB()
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Test Suite")
 }

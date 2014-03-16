@@ -4,7 +4,8 @@ import (
   "../app"
   . "github.com/onsi/ginkgo"
   . "github.com/onsi/gomega"
-  //"log"
+  rethink "github.com/dancannon/gorethink"
+  "log"
   //"fmt"
 )
 
@@ -13,11 +14,11 @@ var _ = Describe("Articles", func() {
   Context("#index", func() {
 
     BeforeEach(func() {
-      //article := Article{"My Heading", "My Body!"}
-      // _, err := rethink.Table("articles").Insert(article).RunWrite(session)
-      //if err != nil {
-      //  log.Println(err)
-      //} 
+      article := app.Article{"My Heading", "My Body!"}
+       _, err := rethink.Table("articles").Insert(article).RunWrite(session)
+      if err != nil {
+        log.Println(err)
+      } 
     })
     
     It("lets test", func() {
